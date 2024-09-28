@@ -18,15 +18,15 @@ export class ConfigBuilder extends BaseConfigBuilder {
         let outbounds;
         if (typeof this.selectedRules === 'string' && PREDEFINED_RULE_SETS[this.selectedRules]) {
             outbounds = getOutbounds(PREDEFINED_RULE_SETS[this.selectedRules]);
-        } else if(this.selectedRules) {
+        } else if(this.selectedRules && Object.keys(this.selectedRules).length > 0) {
             outbounds = getOutbounds(this.selectedRules);
         } else {
             outbounds = getOutbounds(PREDEFINED_RULE_SETS.minimal);
         }
 
         const proxyList = this.config.outbounds.filter(outbound => outbound?.server != undefined).map(outbound => outbound.tag);
-        
-        this.config.outbounds.push({
+
+        this.config.outbounds.unshift({
             type: "urltest",
             tag: "⚡ 自动选择",
             outbounds: DeepCopy(proxyList),
@@ -43,7 +43,7 @@ export class ConfigBuilder extends BaseConfigBuilder {
                     outbounds: ['🚀 节点选择', ...proxyList]
                 });
             } else {
-                this.config.outbounds.push({
+                this.config.outbounds.unshift({
                     type: "selector",
                     tag: outbound,
                     outbounds: proxyList
