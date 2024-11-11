@@ -1,8 +1,22 @@
-# Sublink Worker
+<div align="center">
+  <h1>
+    <b>Sublink Worker</b>
+  </h1>
+</div>
 
-Sublink Worker 是一个可部署在 Cloudflare Worker 上，小而美的订阅转换工具。可以将各种代理协议的分享 URL 转换为不同客户端可用的订阅链接。同时还提供灵活的自定义规则与API支持。
 
-演示站点：[https://sublink-worker.sageer.me](https://sublink-worker.sageer.me)
+<div align="center">
+  <h5>
+    <i>Serverless 自部署订阅转换工具最佳实践</i>
+  </h5>
+</div>
+
+<div align="center">
+  <href>
+    https://sublink-worker.sageer.me
+  </href>
+</div>
+
 ## 功能特点
 
 - 支持协议：ShadowSocks, VMess, VLESS, Hysteria2, Trojan, TUIC
@@ -50,8 +64,9 @@ Sublink Worker 是一个可部署在 Cloudflare Worker 上，小而美的订阅�
 
 ## 最近更新
 
-- 2024-10-15
-  - 添加了[FAQ文档](/docs/FAQ.md)
+- 2024-11-05
+  - [新功能] 现在可以保存自定义基础配置
+  - 优化了UI
 
 [查看更新日志](/docs/update-log.md)
 
