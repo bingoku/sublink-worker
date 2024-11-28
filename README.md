@@ -46,10 +46,11 @@
 - 配置 Cloudflare 账户凭证
 - 使用 Wrangler 部署：`wrangler deploy`
 
-
-## 常见问题
-
-如果您在使用过程中遇到任何问题，请查看 [FAQ文档](/docs/FAQ.md)。
+### 新手？
+#### [视频教程1](https://www.youtube.com/watch?v=ZTgDm4qReyA)
+#### [视频教程2](https://www.youtube.com/watch?v=7abmWqCXPR8)
+> 💡 这些是由社区成员制作的教程视频，详细的讲解可以让你快速上手。但是部分内容可能与我们的见解不同，也可能与最新版本存在差异，建议同时参考[官方文档](/docs)
+#### [官方FAQ](/docs/FAQ.md)
 
 ## API 文档
 
@@ -64,9 +65,8 @@
 
 ## 最近更新
 
-- 2024-11-05
-  - [新功能] 现在可以保存自定义基础配置
-  - 优化了UI
+- 2024-11-23
+  - 修复重复点击生成按钮时，可能导致无法访问短链的问题
 
 [查看更新日志](/docs/update-log.md)
 
@@ -80,7 +80,8 @@
 ├── ClashConfigBuilder.js    # 构建 Clash 配置
 ├── ProxyParsers.js          # 解析各种代理协议的 URL
 ├── utils.js                 # 提供各种实用函数
-├── htmlBuilder.js           # 生成 Web 界面的 HTML
+├── htmlBuilder.js           # 生成 Web 界面
+├── style.js                 # 生成 Web 界面的 CSS
 ├── config.js                # 保存配置信息
 └── docs/
     ├── API-doc.md           # API 文档
